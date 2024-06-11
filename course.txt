@@ -1,0 +1,32 @@
+minikube running in docker
+docker run -p 8080:80 -d nginx
+minikube kubectl version
+minikube kubectl cluster-info
+kubectl get pods
+kubectl get nodes
+kubectl get pods --namespace=kube-system
+minikube ip
+minikube ssh
+docker ps
+kubectl run
+kubectl run my-nginx-pod --image=nginx
+kubectl describe pod my-nginx-pod
+docker ps | grep nginx
+docker exec -it 039a7bc93778 sh (nginx container!!!)
+hostname -I
+cat /usr/share/nginx/html/index.html
+kubectl get pods -o wide
+kubectl get services
+kubectl delete pod my-nginx-pod
+kubectl create deploy my-nginx-deploy --image=nginx
+kubectl describe deploy my-nginx-deploy
+my-nginx-deploy-7b69c488c9-7nthr (DEPLOY_NAME-DEPLOY_HASH-POD_HASH)
+kubectl describe pod my-nginx-deploy-7b69c488c9-7nthr
+kubectl scale deploy my-nginx-deploy --replicas=3
+kubectl scale deploy my-nginx-deploy --replicas=10
+kubectl scale deploy my-nginx-deploy --replicas=4
+
+
+
+docker tag hello-world-flask vladgenyuk/hello-world-flask
+kubectl apply -f flask-deployment.yml
